@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ranpariya Aneri Pravinbhai | Personal Blog & Thoughts</title>
+<style>
+:root{--bg:#f7f6fb;--card:#fff;--ink:#1f1b2e;--mute:#6b6880;--pri:#7c3aed;--pri2:#db2777;--line:#e6e3f0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14121f;--card:#1d1a2e;--ink:#f1eefc;--mute:#a19cba;--line:#2e2a45}}
+:root[data-theme="dark"]{--bg:#14121f;--card:#1d1a2e;--ink:#f1eefc;--mute:#a19cba;--line:#2e2a45}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:auto;padding:0 20px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--card);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700}
+.badge{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;display:grid;place-items:center;font-weight:800;font-size:14px}
+nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;align-items:center;font-size:14px}
+nav ul a:hover{color:var(--pri)}
+.tbtn{border:1px solid var(--line);background:none;color:var(--ink);border-radius:8px;padding:4px 9px;cursor:pointer}
+.hero{padding:56px 0 30px;display:grid;gap:28px;grid-template-columns:1.4fr 1fr;align-items:center}
+.tag{display:inline-block;background:rgba(124,58,237,.12);color:var(--pri);padding:4px 12px;border-radius:99px;font-size:13px;font-weight:600}
+h1{font-size:clamp(30px,5vw,48px);line-height:1.15;margin:14px 0}
+h1 span{background:linear-gradient(90deg,var(--pri),var(--pri2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.mute{color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;font-size:13px}
+.chips span{border:1px solid var(--line);background:var(--card);padding:5px 11px;border-radius:8px}
+.profile{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;text-align:center}
+.avatar{width:84px;height:84px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(135deg,var(--pri),var(--pri2));color:#fff;display:grid;place-items:center;font-size:28px;font-weight:800}
+.profile h2{margin:4px 0;font-size:19px}
+.stats{display:flex;justify-content:center;gap:24px;margin-top:16px}
+.stats b{display:block;font-size:22px;color:var(--pri)}
+section{padding:34px 0}
+h2.sec{font-size:26px;margin:0 0 4px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:16px}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--pri);outline-offset:0}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.btn{border:0;border-radius:10px;padding:10px 20px;font-weight:600;cursor:pointer;color:#fff;background:linear-gradient(90deg,var(--pri),var(--pri2))}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0}
+.pill{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 14px;border-radius:99px;cursor:pointer;font-size:13px}
+.pill.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.bar input{max-width:240px;margin-left:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:18px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.post img{width:100%;height:170px;object-fit:cover;display:block}
+.post .ph{height:170px;background:linear-gradient(135deg,var(--pri),var(--pri2));opacity:.85}
+.pb{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cat{font-size:12px;font-weight:700;color:var(--pri);text-transform:uppercase;letter-spacing:.04em}
+.post h3{margin:0;font-size:18px}
+.post p{margin:0;color:var(--mute);font-size:14px;white-space:pre-wrap}
+.meta{font-size:12px;color:var(--mute)}
+.act{display:flex;gap:8px;margin-top:auto;padding-top:8px;font-size:13px}
+.act button{border:1px solid var(--line);background:none;color:var(--ink);border-radius:8px;padding:4px 10px;cursor:pointer}
+.cm{border-top:1px solid var(--line);margin-top:8px;padding-top:8px;font-size:13px}
+.cm div{margin:4px 0}
+.cm form{display:flex;gap:6px;margin-top:8px}
+.cm input{padding:7px 10px}
+footer{border-top:1px solid var(--line);margin-top:30px;padding:26px 0;text-align:center;font-size:14px;color:var(--mute)}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.row{grid-template-columns:1fr}nav ul{gap:10px;font-size:13px}.bar input{max-width:none;margin:0;width:100%}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#top"><span class="badge">AR</span><span>Aneri Ranpariya</span></a>
+  <ul><li><a href="#about">About</a></li><li><a href="#blogs">Articles</a></li><li><a href="#new-post">Write Post</a></li><li><button class="tbtn" id="theme" aria-label="Toggle theme">◐</button></li></ul>
+</div></nav>
+
+<main class="wrap" id="top">
+  <div class="hero" id="about">
+    <div>
+      <span class="tag">Student &amp; Tech Explorer</span>
+      <h1>Hi, I'm <span>Ranpariya Aneri Pravinbhai.</span></h1>
+      <p class="mute">Welcome to my personal digital journal! This space is dedicated to my college projects, web development adventures and personal stories from my journey as a Computer Engineering student.</p>
+      <div class="chips"><span>Surname: <b>RANPARIYA</b></span><span>Name: <b>ANERI</b></span><span>Father's Name: <b>PRAVINBHAI</b></span><span>Enrollment No: <b>25SE02ML113</b></span></div>
+    </div>
+    <div class="profile">
+      <img id="banner" alt="Illustration" style="width:100%;border-radius:12px;margin-bottom:14px;display:block"><div class="avatar" style="margin-top:-52px;position:relative;border:4px solid var(--card)">AR</div>
+      <h2>Aneri P. Ranpariya</h2>
+      <div class="mute" style="font-size:14px">Web App Development Final Project<br>Enrollment: 25SE02ML113</div>
+      <p class="mute" style="font-size:13px">Built with vanilla HTML5, CSS and JavaScript. Supports blog posting, image upload, search, comments and localStorage persistence.</p>
+      <div class="stats"><div><b id="sPosts">0</b><span class="meta">Published Posts</span></div><div><b id="sLikes">0</b><span class="meta">Reader Likes</span></div></div>
+    </div>
+  </div>
+
+  <section id="new-post">
+    <h2 class="sec">Create a New Blog Post</h2>
+    <p class="mute" style="margin:0">Publish your story with custom images and instant local saving.</p>
+    <form class="box" id="form">
+      <label for="title">Article Title *</label>
+      <input id="title" required maxlength="100" placeholder="e.g. My first week at university">
+      <div class="row">
+        <div><label for="author">Author Name</label><input id="author" value="Ranpariya Aneri Pravinbhai"></div>
+        <div><label for="cat">Category</label>
+          <select id="cat"><option>Personal Journey</option><option>Web Development</option><option>College Life</option><option>Tech &amp; Ideas</option><option>General</option></select></div>
+      </div>
+      <div class="row">
+        <div><label for="file">Upload Image (Optional)</label><input id="file" type="file" accept="image/*"></div>
+        <div><label for="url">Or Image Web URL</label><input id="url" type="url" placeholder="https://..."></div>
+      </div>
+      <label for="body">Blog Content *</label>
+      <textarea id="body" rows="5" required placeholder="Write your story here..."></textarea>
+      <div style="display:flex;gap:10px;margin-top:16px"><button type="button" class="btn ghost" id="clear">Clear</button><button class="btn">Publish Article</button></div>
+    </form>
+  </section>
+
+  <section id="blogs">
+    <h2 class="sec">Recent Publications</h2>
+    <p class="mute" style="margin:0">Explore articles written by Aneri Ranpariya and community contributors.</p>
+    <div class="bar" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+</main>
+
+<footer><div class="wrap">Designed and Built by <b>Ranpariya Aneri Pravinbhai</b> (Enrollment No: 25SE02ML113)<br>Web App Development Submission</div></footer>
+
+<script>
+const CATS=["All","Personal Journey","Web Development","College Life","Tech & Ideas","General"];
+function art(k){
+ const g={campus:["#7c3aed","#db2777"],code:["#0ea5e9","#7c3aed"],growth:["#f59e0b","#db2777"],hero:["#6d28d9","#ec4899"]}[k];
+ let s=`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='${g[0]}'/><stop offset='1' stop-color='${g[1]}'/></linearGradient></defs><rect width='400' height='240' fill='url(#g)'/>`;
+ if(k==="campus")s+=`<circle cx='320' cy='60' r='30' fill='#fde68a'/><rect x='120' y='110' width='160' height='90' fill='#fff' opacity='.95'/><polygon points='110,110 200,60 290,110' fill='#fff'/><rect x='140' y='130' width='18' height='70' fill='#c4b5fd'/><rect x='191' y='130' width='18' height='70' fill='#c4b5fd'/><rect x='242' y='130' width='18' height='70' fill='#c4b5fd'/><rect x='0' y='200' width='400' height='40' fill='#4c1d95' opacity='.55'/><circle cx='60' cy='180' r='26' fill='#34d399'/><rect x='57' y='195' width='6' height='20' fill='#065f46'/><circle cx='345' cy='182' r='22' fill='#34d399'/>`;
+ if(k==="code")s+=`<rect x='90' y='45' width='220' height='130' rx='10' fill='#0f172a'/><rect x='105' y='62' width='70' height='8' rx='4' fill='#f472b6'/><rect x='120' y='82' width='110' height='8' rx='4' fill='#38bdf8'/><rect x='120' y='102' width='80' height='8' rx='4' fill='#a3e635'/><rect x='105' y='122' width='120' height='8' rx='4' fill='#fbbf24'/><rect x='120' y='142' width='60' height='8' rx='4' fill='#c4b5fd'/><path d='M60 175h280l-20 22H80z' fill='#e2e8f0'/><text x='325' y='75' font-size='34' fill='#fff' font-family='monospace'>&lt;/&gt;</text>`;
+ if(k==="growth")s+=`<rect x='60' y='150' width='70' height='60' fill='#fff' opacity='.9'/><rect x='140' y='115' width='70' height='95' fill='#fff' opacity='.9'/><rect x='220' y='80' width='70' height='130' fill='#fff' opacity='.9'/><polygon points='325,40 333,62 356,62 337,76 344,98 325,85 306,98 313,76 294,62 317,62' fill='#fde68a'/><path d='M40 130 L110 100 L190 75 L255 45' stroke='#fff' stroke-width='4' fill='none' stroke-dasharray='8 6'/>`;
+ if(k==="hero")s+=`<circle cx='70' cy='50' r='4' fill='#fff'/><circle cx='340' cy='40' r='5' fill='#fff'/><circle cx='360' cy='150' r='3' fill='#fff'/><circle cx='40' cy='170' r='4' fill='#fff'/><rect x='95' y='55' width='210' height='125' rx='10' fill='#0f172a'/><rect x='108' y='68' width='184' height='99' rx='4' fill='#312e81'/><text x='150' y='130' font-size='46' fill='#fff' font-family='monospace' font-weight='bold'>AR</text><rect x='108' y='75' width='50' height='6' rx='3' fill='#f472b6'/><path d='M65 180h270l-20 20H85z' fill='#e2e8f0'/>`;
+ return "data:image/svg+xml;utf8,"+encodeURIComponent(s+"</svg>");
+}
+const KEY="aneri_blog_v2";
+const seed=[
+ {id:1,title:"Starting My Engineering Journey",author:"Ranpariya Aneri Pravinbhai",cat:"College Life",img:art("campus"),body:"Stepping into B.Tech Computer Engineering felt exciting and a little scary. New people, new subjects and a lot to learn. This blog is where I will share the lessons along the way.",likes:18,comments:[],date:"2026-08-12"},
+ {id:2,title:"Why I Love Building Websites",author:"Ranpariya Aneri Pravinbhai",cat:"Web Development",img:art("code"),body:"Nothing beats writing a few lines of HTML and CSS and watching a page come alive in the browser. Adding JavaScript makes it interactive, and that is where the real fun begins.",likes:15,comments:[],date:"2026-08-25"},
+ {id:3,title:"Small Habits, Big Progress",author:"Ranpariya Aneri Pravinbhai",cat:"Personal Journey",img:art("growth"),body:"Coding for one hour every day beats a ten hour marathon once a month. Consistency is my main goal this semester.",likes:9,comments:[],date:"2026-09-05"}
+];
+let posts=[],filter="All",q="";
+try{const s=localStorage.getItem(KEY);posts=s?JSON.parse(s):seed}catch(e){posts=seed}
+const $=id=>document.getElementById(id);
+function save(){try{localStorage.setItem(KEY,JSON.stringify(posts))}catch(e){}}
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function renderFilters(){
+  $("filters").innerHTML=CATS.map(c=>`<button class="pill ${c===filter?"on":""}" data-c="${esc(c)}">${esc(c)}</button>`).join("")+`<input id="search" type="search" placeholder="Search articles..." value="${esc(q)}">`;
+  document.querySelectorAll(".pill").forEach(b=>b.onclick=()=>{filter=b.dataset.c;renderFilters();render()});
+  $("search").oninput=e=>{q=e.target.value.toLowerCase();render()};
+}
+function render(){
+  $("sPosts").textContent=posts.length;
+  $("sLikes").textContent=posts.reduce((a,p)=>a+p.likes,0);
+  const list=posts.filter(p=>(filter==="All"||p.cat===filter)&&(p.title+p.body+p.author).toLowerCase().includes(q));
+  $("grid").innerHTML=list.length?list.slice().reverse().map(p=>`
+  <article class="post">
+    ${p.img?`<img src="${esc(p.img)}" alt="" onerror="this.outerHTML='<div class=ph></div>'">`:'<div class="ph"></div>'}
+    <div class="pb">
+      <span class="cat">${esc(p.cat)}</span><h3>${esc(p.title)}</h3>
+      <div class="meta">By ${esc(p.author)} • ${esc(p.date)}</div>
+      <p>${esc(p.body)}</p>
+      <div class="act"><button data-like="${p.id}">♥ ${p.likes}</button><button data-cm="${p.id}">💬 ${p.comments.length}</button><button data-del="${p.id}" style="margin-left:auto">Delete</button></div>
+      <div class="cm" id="cm${p.id}" hidden>${p.comments.map(c=>`<div>• ${esc(c)}</div>`).join("")}
+        <form data-add="${p.id}"><input placeholder="Add a comment..." required><button class="btn" style="padding:6px 14px">Post</button></form></div>
+    </div></article>`).join(""):'<p class="mute">No articles found.</p>';
+  document.querySelectorAll("[data-like]").forEach(b=>b.onclick=()=>{const p=posts.find(x=>x.id==b.dataset.like);p.likes++;save();render()});
+  document.querySelectorAll("[data-del]").forEach(b=>b.onclick=()=>{if(confirm("Delete this post?")){posts=posts.filter(x=>x.id!=b.dataset.del);save();render()}});
+  document.querySelectorAll("[data-cm]").forEach(b=>b.onclick=()=>{const e=$("cm"+b.dataset.cm);e.hidden=!e.hidden});
+  document.querySelectorAll("[data-add]").forEach(f=>f.onsubmit=e=>{e.preventDefault();const p=posts.find(x=>x.id==f.dataset.add);p.comments.push(f.querySelector("input").value);save();render();$("cm"+p.id).hidden=false});
+}
+function publish(img){
+  posts.push({id:Date.now(),title:$("title").value.trim(),author:$("author").value.trim()||"Ranpariya Aneri Pravinbhai",cat:$("cat").value,img,body:$("body").value.trim(),likes:0,comments:[],date:new Date().toISOString().slice(0,10)});
+  save();$("form").reset();$("author").value="Ranpariya Aneri Pravinbhai";filter="All";renderFilters();render();$("blogs").scrollIntoView();
+}
+$("form").onsubmit=e=>{
+  e.preventDefault();
+  const f=$("file").files[0];
+  if(f){const r=new FileReader();r.onload=()=>publish(r.result);r.readAsDataURL(f)}else publish($("url").value.trim());
+};
+$("clear").onclick=()=>{$("form").reset();$("author").value="Ranpariya Aneri Pravinbhai"};
+$("theme").onclick=()=>{const d=document.documentElement,dark=getComputedStyle(d).getPropertyValue("--bg").trim()==="#14121f";d.dataset.theme=dark?"light":"dark"};
+$("banner").src=art("hero");
+renderFilters();render();
+</script>
+</body>
+</html>
